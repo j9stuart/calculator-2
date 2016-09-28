@@ -11,13 +11,18 @@ while True:
 	
 	calculation = raw_input(">")
 	token = calculation.split(" ")
-		
+	print token
+
 	if token[0] == "q": 
 		break
 	else:
-		num1 = int(token[1])
-		num2 = int(token[2])
+		if len(token) == 3:
+			num1 = int(token[1])
+			num2 = int(token[2])
 
+		else:
+			num1 = int(token[1])
+		
 		if token[0] == "+":
 			print add(num1, num2)
 
