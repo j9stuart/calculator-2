@@ -7,9 +7,15 @@ def add(*nums):
 
 	return result
 
-def subtract(num1, num2):
+def subtract(*nums):
     """Returns the result of subtracting the second number from the first"""
-    return num1 - num2
+    
+    result = nums[0]
+    
+    for n in nums[1:]:
+    	result -= n
+
+    return result
 
 def multiply(num1, num2):
 	"""Returns the product of the inputs"""

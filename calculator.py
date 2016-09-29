@@ -27,7 +27,11 @@ while True:
 
 		elif token[0] == "-":
 			
-			print subtract(num1, num2)
+			nums = []
+			for item in token[1:]:
+				nums.append(int(item))
+
+			print subtract(*nums)
 
 		elif token[0] == "*":
 			print multiply(num1, num2)
