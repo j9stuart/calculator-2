@@ -15,6 +15,13 @@ while True:
 
 	if token[0] == "q": 
 		break
+
+	elif len(token) < 2:
+			print "Not enough numbers entered for operation to compute. Enter at least one number."
+
+	elif len(token) < 3 and token[0] != "square" and token[0] != "cube":
+		print "Not enough numbers entered for operation to compute. Enter at least two numbers."
+
 	else:
 		nums = []
 		for item in token[1:]:
