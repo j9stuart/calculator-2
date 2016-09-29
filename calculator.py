@@ -34,7 +34,12 @@ while True:
 			print subtract(*nums)
 
 		elif token[0] == "*":
-			print multiply(num1, num2)
+
+			nums = []
+			for item in token[1:]:
+				nums.append(int(item))
+
+			print multiply(*nums)
 
 		elif token[0] == "/":
 			num1 = int(token[1])

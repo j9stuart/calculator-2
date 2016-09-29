@@ -17,9 +17,15 @@ def subtract(*nums):
 
     return result
 
-def multiply(num1, num2):
+def multiply(*nums):
 	"""Returns the product of the inputs"""
-	return num1 * num2
+
+	result = nums[0]
+
+	for n in nums:
+		result *= n
+
+	return result
 
 def divide(num1, num2):
 	"""Divides the first input by the second, returning a floating point number"""
