@@ -9,60 +9,40 @@ from arithmetic import *
 
 while True:
 	
-	calculation = raw_input(">")
+	calculation = raw_input(">").rstrip(" ")
 	token = calculation.split(" ")
 	print token
 
 	if token[0] == "q": 
 		break
 	else:
+		nums = []
+		for item in token[1:]:
+			nums.append(int(item))
 
 		if token[0] == "+":
-			
-			nums=[]
-			for item in token[1:]: 
-				nums.append(int(item))
-		
 			print add(*nums)
 
 		elif token[0] == "-":
-			
-			nums = []
-			for item in token[1:]:
-				nums.append(int(item))
-
 			print subtract(*nums)
 
 		elif token[0] == "*":
-
-			nums = []
-			for item in token[1:]:
-				nums.append(int(item))
-
 			print multiply(*nums)
 
 		elif token[0] == "/":
-			num1 = int(token[1])
-			num2 = int(token[2])
-			print divide(num1, num2)
+			print divide(*nums)
 
 		elif token[0] == "square":
-			num1 = int(token[1])
-			print square(num1)
+			print square(nums[0])
 
 		elif token[0] == "cube":
-			num1 = int(token[1])
-			print cube(num1)
+			print cube(nums[0])
 
 		elif token[0] == "pow":
-			num1 = int(token[1])
-			num2 = int(token[2])
-			print power(num1, num2)
+			print power(nums[0], nums[1])
 
 		elif token[0] == "mod":
-			num1 = int(token[1])
-			num2 = int(token[2])
-			print mod(num1, num2)
+			print mod(nums[0], nums[1])
 
 		else: 
 			print "Your input is not a valid operator!"

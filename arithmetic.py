@@ -27,9 +27,15 @@ def multiply(*nums):
 
 	return result
 
-def divide(num1, num2):
+def divide(*nums):
 	"""Divides the first input by the second, returning a floating point number"""
-	return float(num1) / num2
+	
+	result = float(nums[0])
+
+	for n in nums[1:]:
+		result /= n
+
+	return result
 
 def square(num1):
 	"""Returns the square of the input"""
